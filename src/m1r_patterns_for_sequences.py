@@ -19,7 +19,7 @@ Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
 # ----------------------------------------------------------------------
 # Done: 2. SKIM the program below and RUN it.
 #
-#   Then look more closely at the CODE for:
+#   Then look more closely at the CODE for: 
 #     -- find_example1
 #     -- find_example2
 #     -- find_example3
