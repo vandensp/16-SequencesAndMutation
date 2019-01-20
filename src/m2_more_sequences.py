@@ -16,8 +16,8 @@ Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    run_test_shortest_string()
-    run_test_index_of_largest_number()
+    #run_test_shortest_string()
+    #run_test_index_of_largest_number()
     run_test_number_of_stutters()
     run_test_is_palindrome()
     run_test_count_same()
@@ -103,9 +103,17 @@ def shortest_string(strings):
       :type strings: list[str]   or tuple(str)
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
+    x = 0
+    for k in range (1, len(strings)):
+        if len(strings[k]) < len(strings[x]):
+            x = k
+        elif len(strings[k]) == len(strings[x]):
+            if k < x:
+                x = k
+    return strings[x]
 
 
 def run_test_index_of_largest_number():
@@ -180,10 +188,17 @@ def index_of_largest_number(numbers, n):
 
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
-
+    x = 0
+    for k in range (n):
+        if numbers[k] > numbers[x]:
+            x = k
+        elif numbers[k] == numbers[x]:
+            if k < x:
+                x = k
+    return x
 
 # ----------------------------------------------------------------------
 # Some problems iterate (loop) through the sequence accessing TWO
@@ -235,10 +250,14 @@ def number_of_stutters(s):
        :type s: str
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
-
+    count = 0
+    for k in range (1, len(s)):
+        if s[k] == s[k - 1]:
+            count = count + 1
+    return count
 
 def run_test_is_palindrome():
     """ Tests the   is_palindrome   function. """
