@@ -15,8 +15,8 @@ Authors: David Mutchler, Amanda Stouder, Chandan Rupakheti, Katie Dion,
 
 
 def main():
-    run_test_RETURN_replace_negatives_by_zeros()
-    run_test_MUTATE_replace_negatives_by_zeros()
+    #run_test_RETURN_replace_negatives_by_zeros()
+    #run_test_MUTATE_replace_negatives_by_zeros()
 
 
 def run_test_RETURN_replace_negatives_by_zeros():
@@ -129,10 +129,18 @@ def RETURN_replace_negatives_by_zeros(numbers):
 
     Precondition: The argument is a list of numbers.
     """
-    # TODO: 2. First, READ THE ABOVE TEST CODE.
+    # Done: 2. First, READ THE ABOVE TEST CODE.
     #          Make sure that you understand it.
     #          Then, IMPLEMENT and test THIS FUNCTION
     #          (using the above code for testing).
+
+    list = []
+    for k in range (len(numbers)):
+        if numbers[k] < 0:
+            list = list + [0]
+        else:
+            list = list + [numbers[k]]
+    return list
 
 
 def run_test_MUTATE_replace_negatives_by_zeros():
@@ -185,10 +193,14 @@ def MUTATE_replace_negatives_by_zeros(numbers):
 
     Precondition: The argument is a list of numbers.
     """
-    # TODO: 3. First, READ THE ABOVE TEST CODE.
+    # Done: 3. First, READ THE ABOVE TEST CODE.
     #          Make sure that you understand it.
     #          Then, IMPLEMENT and test THIS FUNCTION
     #          (using the above code for testing).
+
+    for k in range (len(numbers)):
+        if numbers[k] < 0:
+            numbers[k] = 0
 
 # ----------------------------------------------------------------------
 # If this module is running at the top level (as opposed to being
