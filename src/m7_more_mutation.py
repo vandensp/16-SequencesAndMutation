@@ -11,7 +11,7 @@ import rosegraphics as rg
 
 
 def main():
-    #run_test_RETURN_circle()
+    run_test_RETURN_circle()
     run_test_MUTATE_circle()
 
 
